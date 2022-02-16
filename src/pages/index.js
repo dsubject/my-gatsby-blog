@@ -41,7 +41,7 @@ const Blog = ({
 
   return (
     <Layout title="Changing the Subject">
-      <i className="icono"></i><a href="https://www.daniellesubject.com/">{`<< `}daniellesubject.com</a>
+      <a href="https://www.daniellesubject.com/">{`<< `}daniellesubject.com</a>
       <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: 20}}>
         <h1 style={headingStyles}>
           <span style={headingAccentStyles}>Changing the Subject</span>
