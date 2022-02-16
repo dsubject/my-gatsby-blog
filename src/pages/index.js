@@ -1,81 +1,76 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React from "react"
+import { graphql, Link } from "gatsby"
+import PostLink from "../components/post-link"
+import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 
-// styles
+import "../components/layout.css"
+
 const headingStyles = {
   marginTop: 0,
   marginBottom: 64,
-  maxWidth: 320,
 }
+
 const headingAccentStyles = {
   color: "#DDB8FF",
 }
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-  listStyleType: "none" 
+
+const blurbStyles = {
+  display: 'flex',
+  justifyContent: 'center',
+  paddingBottom: 20,
+  marginTop: 0,
+  alignItems: 'center'
 }
 
-const linkStyle = {
-  verticalAlign: "5%"
+const blogListContainer = {
+  justifyContent: 'center',
+  display: 'flex',
+  flexDirection: 'column',
+  paddingBottom: 30
 }
 
-// data
-const links = [
-  {
-    text: "Blog",
-    url: "https://changingthesubject.ca",
-    color: "#8954A8"
+const Blog = ({
+  data: {
+    allMarkdownRemark: { edges },
   },
-  {
-    text: "Publications",
-    url: "https://daniellesubject.com/publications",
-    color: "#1099A8"
-  },
-]
+}) => {
+  const Posts = edges
+    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
-// markup
-const IndexPage = () => {
   return (
-    <Layout>
-      <h1 style={headingStyles}>
-        Dani Subject
-        <br />
-        <span style={headingAccentStyles}>Software developer</span>
-        <span role="img" aria-label="Personal computer emoji">
-          {" "}💻 
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        Hi! I'm Danielle, but you can call me Dani. I'm a software developer with a special interest in creating a greener web. Welcome to my low-carbon website. 
-      </p>
-      <p>This site was built using GatsbyJS and is hosted by Netlify. View the code <a href="https://github.com/dsubject/my-gatsby-blog" target="_blank" >here</a>.</p>
-      <ul style={listStyles}>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles }}>
-            <span>
-              [{" "}<Link
-                style={linkStyle}
-                to={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </Link>{" "}]
-            </span>
-          </li>
-        ))}
-      </ul>
+    <Layout title="Danielle Subject: Blog">
+      <a href="https://www.daniellesubject.com/">Back to Dani's site</a>
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: 20}}>
+        <h1 style={headingStyles}>
+          <span style={headingAccentStyles}>Changing the Subject</span>
+        </h1>
+        <p style={blurbStyles}>Named after a column she used to write at the University of Guelph's student newspaper, Changing the Subject is a blog written by Danielle Subject. Her posts explore (but are not limited to) tech, the environment, and mental health.</p>
+      </div>
+      <div style={blogListContainer}>{Posts}</div>
     </Layout>
   )
 }
 
-export default IndexPage
+export default Blog
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      ) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 150)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            slug
+            title
+          }
+        }
+      }
+    }
+  }
+`
