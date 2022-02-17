@@ -17,6 +17,7 @@ module.exports = {
         path: `${__dirname}/src/markdown-pages`,
       },
     },
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -24,29 +25,18 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
-              showCaptions: true
+              maxWidth: 590,
+              showCaptions: true,
+              loading: 'lazy',
+              markdownCaptions: true,
+              withWebp: true,
+              withAvif: true,
+              quality: 50
             },
           },
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        // Defaults used for gatsbyImageData and StaticImage
-        defaults: {},
-        // Set to false to allow builds to continue on image errors
-        failOnError: true,
-        // deprecated options and their defaults:
-        base64Width: 20,
-        forceBase64Format: `png`, // valid formats: png,jpg,webp
-        useMozJpeg: process.env.GATSBY_JPEG_ENCODER === `MOZJPEG`,
-        stripMetadata: true,
-        defaultQuality: 50,
-        loading: 'lazy'
-    },
-  },
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-transformer-sharp`,
   ],
