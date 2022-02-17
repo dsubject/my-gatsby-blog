@@ -28,11 +28,14 @@ code {
     }
 }
 
+#wcb_p {
+    padding-bottom: 10px !important;
+}
+
 #wcb.wcb-d #wcb_a {
     background: #282C35 !important;
     color: #FFFFFF !important;
     border-color: #DDB8FF !important;
-
 }
 
 #wcb #wcb_g {

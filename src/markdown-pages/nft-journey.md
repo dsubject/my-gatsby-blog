@@ -29,13 +29,13 @@ However, NFTs can be very volatile. In the same way that humans set value to art
 
 After 50 hours of research, I purchased my first NFT in January 2022 from a project called <a href="https://opensea.io/collection/encryptas-1" target="_blank">Encryptas</a>. I chose this project because I liked what it stood for: empowering women in tech and promoting body positivity. They also donate to organizations such as the Malala Fund. 
 
-![Blue Encrypta NFT](./Optimized-Encryptas.png "My first ever NFT, Encryptas #3713")
+![Blue Encrypta NFT](./encryptas.png "My first ever NFT, Encryptas #3713")
 
 Soon after, I joined <a href="https://www.fameladysquad.com/" target="_blank">Fame Ladies Squad</a> — the most accepting group of people I have encountered in the NFT space and probably on the internet. Their community is so fun and welcoming, and I've already made so many friends since joining. They have an interesting history too: their project was originally launched in July 2021 as the "first generative female avatar NFT project." However, in August members of the community discovered that the founders were actually men posing as women. The project was then handed over to key members of the community and relaunched. 
 
 In terms of beautiful artwork, my favourite piece to date has been one collected from a project called <a href="https://www.metaangelsnft.com/" target="_blank">Meta Angels</a>. The community itself is founded on generosity, kindness, and accessibility. 
 
-![Blue Meta Angel NFT](./meta_angels.png "My Meta Angel NFT #386")
+![Blue Meta Angel NFT](./meta-angel.jpg "My Meta Angel NFT #386")
 
 <div style="text-align: center">- - -</div>
 <h3>Financial Empowerment</h3>

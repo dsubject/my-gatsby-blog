@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import "../components/layout.css"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
@@ -38,7 +38,7 @@ export default function Template({
 
   return (
     <Layout title="Danielle Subject: Blog">
-    <Link to="https://www.changingthesubject.ca/">blog</Link>
+    <a href="https://www.changingthesubject.ca/">blog</a>
     <div style={containerStyle} className="blog-post-container">
       <div className="blog-post">
         <h1 style={headerStyle}>{frontmatter.title}</h1>

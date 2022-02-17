@@ -1,7 +1,6 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import PostLink from "../components/post-link"
-import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 
 import "../components/layout.css"
