@@ -38,7 +38,7 @@ export default function Template({
 
   return (
     <Layout title="Danielle Subject: Blog">
-    <Link to="/blog">blog</Link>
+    <Link to="https://www.changingthesubject.ca/">blog</Link>
     <div style={containerStyle} className="blog-post-container">
       <div className="blog-post">
         <h1 style={headerStyle}>{frontmatter.title}</h1>
