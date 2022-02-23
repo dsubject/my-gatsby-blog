@@ -25,7 +25,7 @@ The following are five tips for practicing good email hygiene (and thereby helpi
 
 3. Reconsider CC'ing your coworkers
 
-    If you work in tech I'm sure this one hits close to home. Everytime you CC someone on an email, you've sent an additional copy of that email across a network. Ask yourself, does this person really need to be on this email chain? If the answer is no, don't do it. Not only does this help the environment, but it also saves people time. 
+    If you work in tech I'm sure this one hits close to home. Every time you CC someone on an email, you've sent an additional copy of that email across a network. Ask yourself, does this person really need to be on this email chain? If the answer is no, don't do it. Not only does this help the environment, but it also saves people time. 
 
 4. Update your mailing lists
 
