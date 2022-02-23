@@ -1,12 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: "My Gatsby Blog",
-        menuLinks:[
+    title: 'Changing the Subject',
+    menuLinks: [
       {
         name: 'home',
-        link:'/'
+        link: '/'
       }
-    ]
+    ],
+    description: "Named after a column she used to write at the University of Guelph's student newspaper, Changing the Subject is a blog written by Danielle Subject. Her posts explore (but are not limited to) tech, the environment, and mental health.",
+    siteUrl: 'https://www.changingthesubject.ca',
+    twitterUsername: '@danisubject',
+    image: '/homeBanner.png',
+    author: 'Danielle Subject',
+    keywords: ['green software', 'green tech', 'software developer', 'beekeeping']
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
