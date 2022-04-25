@@ -38,7 +38,7 @@ export default function Template ({
   const cardImage = frontmatter.featuredImage ? frontmatter.featuredImage.childImageSharp.fluid.src : '/homeBanner.png'
 
   return (
-    <Layout title={frontmatter.title} image={cardImage}>
+    <Layout title={frontmatter.title} image={cardImage} description={frontmatter.description}>
       <a href='https://www.changingthesubject.ca/'>blog</a>
       <div style={containerStyle} className='blog-post-container'>
         <div className='blog-post'>
@@ -70,6 +70,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        description
         featuredImgAlt
         featuredImage {
           childImageSharp {

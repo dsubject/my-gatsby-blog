@@ -3,6 +3,7 @@ slug: "/blog/carbon-footprint-of-email"
 date: "2022-02-23"
 title: "How decluttering your email can help the environment"
 tags: ["digital footprint", "tech", "carbon footprint", "mental health"]
+description: "Learn how to reduce your carbon footprint by decluttering your inbox and reducing your digital correspondence"
 ---
 
 As you read this post, your spam folder likely just received another email. That email is now taking up space in a data center, which means it is consuming unnecessary electricity. The same goes for all of the promotions you receive and haven't opened, or the number of email chains you're CC'd on. 

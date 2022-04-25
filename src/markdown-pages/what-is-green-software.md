@@ -6,6 +6,7 @@ featuredImage: coding.jpg
 featuredImgAlt: "Code written on the screen of a Macbook"
 tags: ["tech", "green web"]
 author: ["Danielle Subject"]
+description: "Green software is an umbrella term for a ton of concepts and ideologies, but to make things simple I'm going to break some concepts down for you by using something we are all familiar with — websites, or web applications."
 ---
 
 I started researching green software in December, and have since been trying to work out a way to define and also teach the concept to others. Being a new discipline, resources on the topic are limited, specifically when it comes to available data. Figuring out how to measure the exact carbon impact of an application is still in question, though there is a lot of research and work being done to answer that question, specifically by the <a href="https://greensoftware.foundation/" target="_blank">Green Software Foundation</a> (GSF).
