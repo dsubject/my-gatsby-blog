@@ -10,10 +10,10 @@ function SEO ({ description, lang, meta, image: metaImage, title, pathname }) {
         site {
           siteMetadata {
             title
-            description
             author
             keywords
             siteUrl
+            description
           }
         }
       }
