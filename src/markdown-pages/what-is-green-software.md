@@ -1,11 +1,14 @@
 ---
 slug: "/blog/what-is-green-software"
-date: "2022-04-22"
+date: "2022-04-25"
 title: "What is 'green' software?"
+featuredImage: coding.jpg
+featuredImgAlt: "Code written on the screen of a Macbook"
 tags: ["tech", "green web"]
+author: ["Danielle Subject"]
 ---
 
-I started researching green software in December, and have since gone down rabbit holes in search of ways to define and also teach the concept to others. Being a new discipline, resources on the topic are limited, specifically when it comes to available data. Figuring out how to measure the exact carbon impact of an application is still in question, though there is a lot of research and work being done to answer that question, specifically by the <a href="https://greensoftware.foundation/" target="_blank">Green Software Foundation</a>.
+I started researching green software in December, and have since been trying to work out a way to define and also teach the concept to others. Being a new discipline, resources on the topic are limited, specifically when it comes to available data. Figuring out how to measure the exact carbon impact of an application is still in question, though there is a lot of research and work being done to answer that question, specifically by the <a href="https://greensoftware.foundation/" target="_blank">Green Software Foundation</a>.
 
 What is green software?
 
@@ -42,7 +45,7 @@ body {
 
 Above is an example of how Github incorporates system fonts, sourced from <a href="https://css-tricks.com/snippets/css/system-font-stack/" target="_blank">CSS-Tricks' System Font Stack</a> article (highly recommended read for CSS lovers).
 
-3. Optimize images and implement "lazy loading," which is the practice of delaying the initialization of resources until the user actually needs it.
+3. Optimize images and implement "lazy loading," which is the practice of delaying the initialization of resources until the user actually needs it. For an easy to use image optimization tool, I recommend checking out <a href="https://tinypng.com/" target="_blank">tinyPNG</a>.
 
 4. Limit the use of JavaScript. JavaScript can be hard on performance — JS processing consumes a large chunk of CPU. Removing redundant code and doing a memory sweep to track down leaks such as accidentally defining global variables or cyclical callbacks can make a huge difference not only on your site's performance, but also on the energy your site consumes.
 
