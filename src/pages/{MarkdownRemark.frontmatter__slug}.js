@@ -1,14 +1,14 @@
-import React from "react"
-import { graphql } from "gatsby"
-import "../components/layout.css"
-import Layout from "../components/layout"
-import Img from "gatsby-image"
+import React from 'react'
+import { graphql } from 'gatsby'
+import '../components/layout.css'
+import Layout from '../components/layout'
+import Img from 'gatsby-image'
 
 const containerStyle = {
   color: 'rgba(255, 255, 255, 0.88)',
   display: 'flex',
   justifyContent: 'center',
-  alignItems: 'center',
+  alignItems: 'center'
 }
 
 const headerStyle = {
@@ -27,32 +27,36 @@ const subheaderStyle = {
 
 const contentContainer = {
   fontSize: '1.125rem',
-  lineHeight: "1.75"
+  lineHeight: '1.75'
 }
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
+export default function Template ({
+  data // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
 
   return (
-    <Layout title={frontmatter.title}>
-    <a href="https://www.changingthesubject.ca/">blog</a>
-    <div style={containerStyle} className="blog-post-container">
-      <div className="blog-post">
-        <h1 style={headerStyle}>{frontmatter.title}</h1>
-        <p style={subheaderStyle}>{frontmatter.date}</p>
-        { frontmatter.featuredImgAlt ? 
-          <Img fluid={frontmatter.featuredImage.childImageSharp.fluid} alt={frontmatter.featuredImgAlt} loading="lazy" /> : null
-        }
-        <div
-          style={contentContainer}
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+    <Layout title={frontmatter.title} featuredImage={frontmatter.featuredImage || null}>
+      <a href='https://www.changingthesubject.ca/'>blog</a>
+      <div style={containerStyle} className='blog-post-container'>
+        <div className='blog-post'>
+          <h1 style={headerStyle}>{frontmatter.title}</h1>
+          <p style={subheaderStyle}>{frontmatter.date}</p>
+          {frontmatter.featuredImgAlt ? (
+            <Img
+              fluid={frontmatter.featuredImage.childImageSharp.fluid}
+              alt={frontmatter.featuredImgAlt}
+              loading='lazy'
+            />
+          ) : null}
+          <div
+            style={contentContainer}
+            className='blog-post-content'
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        </div>
       </div>
-    </div>
     </Layout>
   )
 }
