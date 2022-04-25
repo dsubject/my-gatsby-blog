@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-function SEO ({ description, lang, meta, image: metaImage, featuredImage, title, pathname }) {
+function SEO ({ description, lang, meta, image: metaImage, title, pathname }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -14,7 +14,6 @@ function SEO ({ description, lang, meta, image: metaImage, featuredImage, title,
             author
             keywords
             siteUrl
-            image
           }
         }
       }
@@ -22,7 +21,7 @@ function SEO ({ description, lang, meta, image: metaImage, featuredImage, title,
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const image = featuredImage || `${site.siteMetadata.siteUrl}${metaImage}`
+  const image = `${site.siteMetadata.siteUrl}${metaImage}`
 
   /* canonical link is a hint to a search engine that this is the source* for this content - it helps
 resolve duplicate content issues  */

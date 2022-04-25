@@ -13,10 +13,10 @@ const pageStyles = {
   maxWidth: '42rem'
 }
 
-const Layout = ({ children, title, desc, image, keywords }) => {
+const Layout = ({ children, title, image, keywords }) => {
   return (
     <main className='main-container' style={pageStyles}>
-      <Seo title={title} description={desc} image={image} />
+      <Seo title={title} image={image} />
       {children}
       <Footer />
     </main>

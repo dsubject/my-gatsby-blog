@@ -35,9 +35,10 @@ export default function Template ({
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
+  const cardImage = frontmatter.featuredImage ? frontmatter.featuredImage.childImageSharp.fluid.src : '/homeBanner.png'
 
   return (
-    <Layout title={frontmatter.title} featuredImage={frontmatter.featuredImage || null}>
+    <Layout title={frontmatter.title} image={cardImage}>
       <a href='https://www.changingthesubject.ca/'>blog</a>
       <div style={containerStyle} className='blog-post-container'>
         <div className='blog-post'>
