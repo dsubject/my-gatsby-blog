@@ -1,8 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Layout from "../components/layout"
 
 // Components
 import { Link, graphql } from "gatsby"
+
+const container = {
+  justifyContent: 'center',
+  display: 'flex',
+  flexDirection: 'column',
+  paddingBottom: 30
+}
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -12,15 +20,17 @@ const Tags = ({ pageContext, data }) => {
   } tagged with "${tag}"`
 
   return (
-    <div>
+    <Layout title={tag}>
+      <div style={container}>
       <h1>{tagHeader}</h1>
       <ul>
         {edges.map(({ node }) => {
           const { slug } = node.fields
-          const { title } = node.frontmatter
+          const { title, date } = node.frontmatter
           return (
             <li key={slug}>
-              <Link to={slug}>{title}</Link>
+              <Link to={slug}>{title} ({date})</Link>
+              <p>{node.excerpt}</p>
             </li>
           )
         })}
@@ -30,7 +40,8 @@ const Tags = ({ pageContext, data }) => {
               You'll come back to it!
             */}
       <Link to="/tags">All tags</Link>
-    </div>
+      </div>
+    </Layout>
   )
 }
 
@@ -69,10 +80,14 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
+          id
+          excerpt(pruneLength: 150)
           fields {
             slug
           }
           frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            slug
             title
           }
         }
