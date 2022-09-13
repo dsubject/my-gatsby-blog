@@ -2,8 +2,7 @@
 slug: "/blog/what-is-an-nft"
 date: "2022-02-15"
 title: "NFTs Explained: Buying my First NFT"
-tags: ["crypto", "tech", "mental health"]
-description: "Learn how and why I got into the mysterious world of NFTs"
+tags: ["tech"]
 ---
 
 <i>*Before you read this post, I want to point out something very important to me. I am completely aware of the negative impact cryptocurrencies and NFTs have on the environment. I am a software developer that advocates for a greener web, so I realize this post might seem hypocritical. However, I am not the only dev aware of this. There are big changes coming to the blockchain space as we see cryptocurrencies adopting proof of stake — a change that is predicted to reduce cryptos' carbon impact by up to 90%. NFT artists are also demanding more sustainability, which will lead to bigger changes. I will follow up this precursor with a post eventually, but please bare with me.</i>
