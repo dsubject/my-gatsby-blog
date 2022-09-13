@@ -1,19 +1,19 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
-import PostLink from "../components/post-link"
-import Layout from "../components/layout"
-import Tags from "../pages/tags"
+import React from 'react'
+import { graphql, Link } from 'gatsby'
+import PostLink from '../components/post-link'
+import Layout from '../components/layout'
+import Tags from '../pages/tags'
 
-import "../components/layout.css"
-import kebabCase from "lodash/kebabCase"
+import '../components/layout.css'
+import kebabCase from 'lodash/kebabCase'
 
 const headingStyles = {
   marginTop: 0,
-  marginBottom: 64,
+  marginBottom: 64
 }
 
 const headingAccentStyles = {
-  color: "#DDB8FF",
+  color: '#DDB8FF'
 }
 
 const blurbStyles = {
@@ -35,29 +35,42 @@ const Blog = ({
   data: {
     allMarkdownRemark: { edges, group },
     site: {
-      siteMetadata: { title },
-    },
-  },
+      siteMetadata: { title }
+    }
+  }
 }) => {
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
   return (
-    <Layout title="Blog">
-      <a href="https://www.daniellesubject.com/">{`<< `}daniellesubject.com</a>
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: 20}}>
+    <Layout title='Blog'>
+      <a href='https://www.daniellesubject.com/'>{`<< `}daniellesubject.com</a>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: 20
+        }}
+      >
         <h1 style={headingStyles}>
           <span style={headingAccentStyles}>Changing the Subject</span>
         </h1>
-        <div style={blurbStyles}>
+        {/* <div style={blurbStyles}>
         {group.map(tag => (
             <Link   to={`/tags/${kebabCase(tag.fieldValue)}/`}>
               {tag.fieldValue}({tag.totalCount})
             </Link>
         ))}
-      </div>
-        <p style={blurbStyles}>Named after a column she used to write at the University of Guelph's student newspaper, Changing the Subject is a blog written by Danielle Subject. Her posts explore (but are not limited to) tech, the environment, and mental health.</p>
+      </div> */}
+        <p style={blurbStyles}>
+          Named after a column she used to write at the University of Guelph's
+          student newspaper, Changing the Subject is a blog written by Danielle
+          Subject. Her posts explore (but are not limited to) tech, the
+          environment, and mental health.
+        </p>
       </div>
 
       <div style={blogListContainer}>{Posts}</div>
@@ -74,13 +87,11 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      ) {
-        group(field: frontmatter___tags) {
-          fieldValue
-          totalCount
-        }
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
+      }
       edges {
         node {
           id
