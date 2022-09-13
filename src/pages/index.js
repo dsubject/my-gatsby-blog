@@ -1,9 +1,11 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import PostLink from "../components/post-link"
 import Layout from "../components/layout"
+import Tags from "../pages/tags"
 
 import "../components/layout.css"
+import kebabCase from "lodash/kebabCase"
 
 const headingStyles = {
   marginTop: 0,
@@ -31,7 +33,10 @@ const blogListContainer = {
 
 const Blog = ({
   data: {
-    allMarkdownRemark: { edges },
+    allMarkdownRemark: { edges, group },
+    site: {
+      siteMetadata: { title },
+    },
   },
 }) => {
   const Posts = edges
@@ -45,8 +50,16 @@ const Blog = ({
         <h1 style={headingStyles}>
           <span style={headingAccentStyles}>Changing the Subject</span>
         </h1>
+        <div style={blurbStyles}>
+        {group.map(tag => (
+            <Link   to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              {tag.fieldValue}({tag.totalCount})
+            </Link>
+        ))}
+      </div>
         <p style={blurbStyles}>Named after a column she used to write at the University of Guelph's student newspaper, Changing the Subject is a blog written by Danielle Subject. Her posts explore (but are not limited to) tech, the environment, and mental health.</p>
       </div>
+
       <div style={blogListContainer}>{Posts}</div>
     </Layout>
   )
@@ -56,9 +69,18 @@ export default Blog
 
 export const pageQuery = graphql`
   query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       ) {
+        group(field: frontmatter___tags) {
+          fieldValue
+          totalCount
+        }
       edges {
         node {
           id

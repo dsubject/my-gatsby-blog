@@ -2,7 +2,7 @@
 slug: "/blog/green-web-design"
 date: "2021-11-23"
 title: "Building a low carbon Website"
-tags: ["tech", "green web"]
+tags: ["tech", "green code"]
 ---
 
 I built this site to be as minimal as possible — the smaller the web page, the less energy is required to view it. According to a really amazing  <a href="https://www.websitecarbon.com/" target="_blank">tool</a> developed by Digital Wholesome, the average web page tested produces 1.76 grams of CO2 per page view. For a site that carries 10,000 page views per month, that's 211 kg of CO2 per year. 
