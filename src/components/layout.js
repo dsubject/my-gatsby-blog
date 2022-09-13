@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from '../components/footer'
-import SEO from './seo'
+import Seo from './seo'
 
 const pageStyles = {
   color: 'rgba(255, 255, 255, 0.88)',
@@ -13,10 +13,10 @@ const pageStyles = {
   maxWidth: '42rem'
 }
 
-const Layout = ({ children, title, desc, image, keywords }) => {
+const Layout = ({ children, title, image, keywords, description }) => {
   return (
     <main className='main-container' style={pageStyles}>
-      <SEO title={title} description={desc} image={image} />
+      <Seo title={title} image={image} description={description} />
       {children}
       <Footer />
     </main>
