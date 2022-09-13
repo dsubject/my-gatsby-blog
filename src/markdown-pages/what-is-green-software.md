@@ -4,7 +4,7 @@ date: "2022-04-25"
 title: "What is 'green' software?"
 featuredImage: coding.jpg
 featuredImgAlt: "Code written on the screen of a Macbook"
-tags: ["tech", "green web"]
+tags: ["tech", "green code"]
 author: ["Danielle Subject"]
 ---
 
