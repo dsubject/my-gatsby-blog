@@ -10,11 +10,10 @@ function SEO ({ description, lang, meta, image: metaImage, title, pathname }) {
         site {
           siteMetadata {
             title
-            description
             author
             keywords
             siteUrl
-            image
+            description
           }
         }
       }
@@ -22,10 +21,7 @@ function SEO ({ description, lang, meta, image: metaImage, title, pathname }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const image =
-    metaImage
-      ? `${site.siteMetadata.siteUrl}${metaImage}`
-      : null
+  const image = `${site.siteMetadata.siteUrl}${metaImage}`
 
   /* canonical link is a hint to a search engine that this is the source* for this content - it helps
 resolve duplicate content issues  */
