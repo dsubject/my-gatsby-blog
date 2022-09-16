@@ -44,7 +44,7 @@ const Blog = ({
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
   return (
-    <Layout title='Blog'>
+    <Layout title='Blog' image='/homeBanner.png'>
       <a href='https://www.daniellesubject.com/'>{`<< `}daniellesubject.com</a>
       <div
         style={{
