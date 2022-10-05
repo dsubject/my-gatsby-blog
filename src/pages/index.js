@@ -9,7 +9,8 @@ import kebabCase from 'lodash/kebabCase'
 
 const headingStyles = {
   marginTop: 0,
-  marginBottom: 64
+  marginBottom: 64,
+  alignSelf: 'center'
 }
 
 const headingAccentStyles = {
@@ -20,8 +21,15 @@ const blurbStyles = {
   display: 'flex',
   justifyContent: 'center',
   paddingBottom: 20,
-  marginTop: 0,
   alignItems: 'center'
+}
+
+const tagStyles = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  paddingBottom: 20,
+  marginTop: 0,
+  flexWrap: 'wrap'
 }
 
 const blogListContainer = {
@@ -51,20 +59,19 @@ const Blog = ({
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          alignItems: 'center',
           marginTop: 20
         }}
       >
         <h1 style={headingStyles}>
           <span style={headingAccentStyles}>Changing the Subject</span>
         </h1>
-        {/* <div style={blurbStyles}>
-        {group.map(tag => (
-            <Link   to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue}({tag.totalCount})
+        <div style={tagStyles}>
+          {group.map(tag => (
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              {tag.fieldValue}
             </Link>
-        ))}
-      </div> */}
+          ))}
+        </div>
         <p style={blurbStyles}>
           Named after a column she used to write at the University of Guelph's
           student newspaper, Changing the Subject is a blog written by Danielle

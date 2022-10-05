@@ -22,6 +22,7 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout title={tag}>
       <div style={container}>
+      <a href='https://www.changingthesubject.ca/'>blog</a>
       <h1>{tagHeader}</h1>
       <ul>
         {edges.map(({ node }) => {
