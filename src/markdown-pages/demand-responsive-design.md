@@ -21,7 +21,7 @@ The demand for electricity is in a constant state of flux. When demand is low, m
 
 Carbon intensity describes how clean electricity is. Specifically, it's a measurement of the amount of greenhouse gases it takes to make one unit of electricity. Carbon intensity is measured in grams of CO2 per kW/hour of electricity. 
 
-Carbon intensity varies throughout different times of the day as well as throughout the year, as it's dependent on the output provided by renewable energy sources such as hydro, wind, nuclear, or solar power. When grid demand is low and less electricity needs to be generated, there is usually more contribution from renewables. 
+Carbon intensity varies throughout different times of the day as well as throughout the year, depending on how many renewables are added to the supply. Unfortunately, you can't turn the wind or sun up when grid demand is high. Therefore, to manage the intermittent nature of renewable sources, a source for baseload generation is required. In many cases, this baseload generation comes from fossil fuels. Peak power demand is often satisfied by sources that can be easily stopped and started, such as burning fossil fuels. (Shoutout to <a href="https://medium.com/@margarita.rojkova" target="_blank">Margarita Rojkova</a> for helping me understand baseload generation)
 
 ![Branch magazine's different screens per grid intensity](./branchmag.png "From right to left: Low grid intensity, Medium grid intensity, High grid intensity")
 
