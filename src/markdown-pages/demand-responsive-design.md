@@ -1,7 +1,7 @@
 ---
 slug: "/blog/demand-responsive-design"
 date: "2022-10-05"
-title: "Demand Responsive Design: designing apps that respond to grid demand"
+title: "Demand-Responsive Design: designing apps that respond to grid demand"
 tags: ["tech", "green code"]
 ---
 
