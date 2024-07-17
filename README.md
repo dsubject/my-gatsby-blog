@@ -1,5 +1,5 @@
 <h1 align="center">
-  My Low-Carbon Blog
+  [Deprecated] My Low-Carbon Blog
 </h1>
 
 ## Welcome to my site
